@@ -19,20 +19,22 @@
         <header>
             <!--le logo en haut à gauche avec un lien vide
             J'ai laissé l'image en png, faut il la mettre en jpeg ? -->
+            <div class="booki-header">
             <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="Logo Booki"></a>
             <!--Je fais une liste pour le menu en haut à droite, elle sera utilisable telle quel pour les mobiles-->
             <ul>
-                <li><a href="#">Hébergements</a></li>
-                <li><a href="#">Activités</a></li>
+                <li><a id="hebergements" href="#hebergements">Hébergements</a></li>
+                <li><a href="#activites">Activités</a></li>
             </ul>
-
-            </li>
+        </div>
         </header>
         <main>
-            <div class="hebergements-and-populaires">
+            <!-- section hebergement avec id hebergement -->
+            <div id="hebergements" class="hebergements-and-populaires">
                 <section class="hebergements">
 
                 </section>
+                <!-- section populaires  -->
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
@@ -99,6 +101,11 @@
                     </div>
                 </section>
             </div>
+            <!-- section activite à marseille avec id activite à marseille -->
+            <div id="activites" class="activites">
+                <section class="activites">
+
+                </section>
         </main>
         <footer></footer>
     </div>

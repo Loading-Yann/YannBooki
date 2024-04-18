@@ -58,18 +58,61 @@ a {
     color: var(--main-bg-color)
 }
 /******Header*****/
-/*pas sûr de moi pour le sélécteur*/
-
-header { display: flex;
-    justify-content: row;
+/* espacement du logo et du menu */
+.booki-header {
+    display: flex;
+    justify-content : row;
     justify-content: space-between;
+    /* border-top: 0px solid #0065FC; *essaie pour voir si ça le stabilise */
 }
+/* le logo en rangé */
 header ul {
-    display : flex;
-    justify-content: space-between;
+    display: flex;
+    justify-content: row;
 }
+/* les points bien réparti */
+header li {
+    list-style: none;
+    margin-left : 50px ;
+    }
+/* survol des menus */
+header li:hover {
+    border-top: 1px solid #0065FC; /* Crée un trait de soulignement */
+        line-height: 1.5; /* Ajuste l'espacement entre les lignes de texte */
+    color: #0065FC;
+    vertical-align: middle; /* Aligne verticalement le texte au milieu */
+    }
 
+/* je fais la média queries pour mobile */
+@media screen and (max-width: 767.98px) {
+    /* Je ne comprends pas encore pourquoi entre header #hebergements et header li:hover le résultat des mêmes proprriété est différents */
+    header #hebergements { border-bottom: 1px solid #0065FC; /* Crée un trait de soulignement */
+        line-height: 0.5; /* Ajuste l'espacement entre les lignes de texte */
+        padding-bottom: 4px;
+        border-top: none;
+        color: #0065FC;
+        }
+        /* on passe en menu vertical avec le logo et centré */
+    .booki-header {
+        display: flex;
+        flex-direction : column;
+        align-items: center;       
+        }
+        /* il n'y a pas de survol sur mobile apriori. La propriété plus haut devrait suffir à un rendu stable */
+header li:hover {
+        border-top: none; /* annule le trait de soulignement */
+        border-bottom: 1px solid #0065FC; /* Crée un trait de soulignement */
+            line-height: 0.5; /* Ajuste l'espacement entre les lignes de texte */
+        color: #0065FC;
+        }
+        /* inversion de la marge pour garder le centre */
+header li {
+    margin-left : 0px ;
+    padding: 20px;
+    }
 
+    /*  je dois sans doute faire un point pour la tablette que je n'ai pas compris. Des marges de page ? */
+    
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -174,6 +217,5 @@ header ul {
 }
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 767.98px) 
     /* ... */
-}
