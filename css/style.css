@@ -128,9 +128,9 @@ header li {
 .formulairelocalisation button {
     background-color: #0065FC;
     color: #DEEBFF;
-    border-radius: 20%;
-    padding : auto;
-    font-size: small;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    font-size: medium;
 }
 
 
@@ -158,7 +158,6 @@ margin-right: 20px;
 .filtres {
     display: flex;
     justify-content: row;
-    align-items: flex-start;
 
 }
 /* j'aligne aussi les puces de mes listes */
@@ -166,10 +165,15 @@ margin-right: 20px;
 display: flex;
 justify-content: row;
 }
+
 /* j'enlève les puces par défaut et je les réparti */
 .filtres li {
 list-style: none;
 margin-left : 20px ;
+border: 1px  solid black;
+border-radius: 10% 10% 10% 10% / 50% 50% 50% 50% ;
+padding: 4px;
+font-weight: bold;
 }
     /* Cacher la case à cocher par défaut */
 .filtres input[type="checkbox"] {
@@ -181,18 +185,20 @@ height: 0;
 /* Le fond change au survol */
 .checkboxfiltres:hover + label {
 background-color: #0065FC;
+opacity: 0.3;
 }
 /*  le fond reste quand la case est cliquée */
 .checkboxfiltres:focus + label {
     background-color: #0065FC;
+    opacity: 0.25;
     }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
 display: flex;
 justify-content: row;
-
-
+gap: 20px;
 }
 .hebergements {
     flex: 2;
@@ -208,8 +214,12 @@ justify-content: row;
 }
 
 /****** Hebergements ***********/
+
+.hebergements-title {
+margin-bottom: 20px;
+}
+
 .hebergements {
-    width: 60%;
     display: flex;
     justify-content: row space-between;
     align-items: flex-start;
@@ -218,7 +228,7 @@ justify-content: row;
 
 /* Je modifie la taille de l'image dans les résultats de recherche */
 .hebergements img {
-    height: 33%;
+    height: 50%;
     width: 225px;
     object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
     border-top-left-radius: 20px;
@@ -228,15 +238,16 @@ justify-content: row;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px;
+    /* flex en trois fois pour bien comprendre comment j'ai fait pour qu'ils se répartissent */
+/* flex-grow: 0; /* L'élément ne peut pas s'étendre */
+/* flex-shrink: 0; L'élément ne peut pas rétrécir */
+/* flex-basis: calc(30% - 20px); Définir la largeur de base de chaque carte */ */
 }
 .hebergements .card {
     display: flex;
 flex-direction: column;
-/* flex en trois fois pour bien comprendre comment j'ai fait pour qu'ils se répartissent */
-flex-grow: 0; /* L'élément ne peut pas s'étendre */
-flex-shrink: 0; /* L'élément ne peut pas rétrécir */
-flex-basis: calc(30% - 20px); /* Définir la largeur de base de chaque carte */
+height: 225px;
 }
 
 /****** Populaires ***********/
