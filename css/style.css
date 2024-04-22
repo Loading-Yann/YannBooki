@@ -17,6 +17,8 @@ body {
     display: flex;
     justify-content: center;
 }
+strong { font-weight: none;}
+em { font-style: normal;}
 
 .main-container {
     width: 100%;
@@ -110,13 +112,85 @@ header li {
     margin-left : 0px ;
     padding: 20px;
     }
-
+}
     /*  je dois sans doute faire un point pour la tablette que je n'ai pas compris. Des marges de page ? */
-    
+/****** Titres d'accroches *********/
+.titreaccrocheur h1 {
+    flex-wrap: wrap;
+    font-weight: thin;
+}
+.titreaccrocheur p {
+    font-weight: thin;
+}
+/****** Formulaires recherches  ********/
+
+/* le bouton recherche */
+.formulairelocalisation button {
+    background-color: #0065FC;
+    color: #DEEBFF;
+    border-radius: 20%;
+    padding : auto;
+    font-size: small;
+}
+
+
+.formulairelocalisation button .fa-magnifying-glass { display: none;}
+
+/* Le média queries qui enlève rechercher et mettent la loupe */
+@media screen and (max-width: 767.98px) {
+    .formulairelocalisation button .fa-magnifying-glass { display: flex;}
+    .formulairelocalisation button p {display: none;}
+}
+.formulairelocalisation ul {
+    display: flex;
+    justify-content: row;
+    margin-right: 30px;
+}
+
+
+
+/****** formulaires filtres ******/
+
+nav i {
+margin-right: 20px;
+}
+/* mettre tous les filtres alignés avec le bouton */
+.filtres {
+    display: flex;
+    justify-content: row;
+    align-items: flex-start;
+
+}
+/* j'aligne aussi les puces de mes listes */
+.filtres ul  {
+display: flex;
+justify-content: row;
+}
+/* j'enlève les puces par défaut et je les réparti */
+.filtres li {
+list-style: none;
+margin-left : 20px ;
+}
+    /* Cacher la case à cocher par défaut */
+.filtres input[type="checkbox"] {
+position: absolute;
+opacity: 0;
+width: 0;
+height: 0;
+} 
+/* Le fond change au survol */
+.checkboxfiltres:hover + label {
+background-color: #0065FC;
+}
+/*  le fond reste quand la case est cliquée */
+.checkboxfiltres:focus + label {
+    background-color: #0065FC;
+    }
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
+display: flex;
+justify-content: space-between;
 }
 
 .hebergements-and-populaires section {
@@ -219,3 +293,4 @@ header li {
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) 
     /* ... */
+    

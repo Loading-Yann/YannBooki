@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+<!-- <i class="fa-solid fa-star" style="color: #0065fc;"></i> pour l'étoile bleu plus tard -->
+<!-- <i class="fa-solid fa-chart-line" style="color: #0065fc;"></i> pour le symbole de stat -->
+<!-- <i class="fa-solid fa-info" style="color: #0065fc;"></i> poru l'icone d'information -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,6 +30,42 @@
             </ul>
         </div>
         </header>
+        <!-- je fais la partie formulaire -->
+        <nav>
+            <!-- la div pour le titre accrocheur -->
+<div class="titreaccrocheur" >
+    <h1 id="titreaccrocheur">Trouvez votre <strong>hébergements</strong> pour des <em>vacances</em> de rêve</h1>
+    <p>En plein centre-ville ou en pleine nature</p>
+</div>
+<!-- Je fais la div de configuration de la recherche -->
+<div class="formulaire recherche">
+<!-- localisation -->
+<div class="formulairelocalisation">
+    <form action="" method="post">
+        <label for=""><i class="fa-solid fa-location-dot" style="color: #000000;"></i></a></label>
+        <input type="search" name="localisation" id="localisation" placeholder="Où allons-nous rêver aujourd'hui ?" value="Marseille, France">
+        <button><p>Rechercher</p> <i id="loupe" class="fa-solid fa-magnifying-glass" style="color: #deebff;"></i> </button>
+    </form>
+</div>
+<div class="filtres">
+    <form method="post" action="">
+        <ul>
+        <li><button>Filtres</button></li>
+            <li><input class="checkboxfiltres" type="checkbox" name="Economique" id="Economique"> <label for="Economique"><i class="fa-solid fa-money-bill-1-wave" style="color: #0065fc;"></i>&#201;conomique</label></li>
+            <li><input class="checkboxfiltres" type="checkbox" name="Famillial" id="Famillial"> <label for="Famillial"><i class="fa-solid fa-child" style="color: #0065fc;"></i>Famillial</label></li>
+            <li><input class="checkboxfiltres" type="checkbox" name="Romantique" id="Romantique"> <label for="Romantique"><i class="fa-solid fa-heart" style="color: #0065fc;"></i>Romantique</label></li>
+            <li><input class="checkboxfiltres" type="checkbox" name="Nos pepites" id="Nos pepites"> <label for="Nos pepites"><i class="fa-solid fa-fire" style="color: #0065fc;"></i>Nos pépites</label></li>
+        </ul>
+    </form>
+</div>
+<div>
+    <p>
+    <i class="fa-solid fa-info" style="color: #0065fc;"></i> Plus de 500 sont disponibles dans cette ville 
+</p>
+</div>
+
+</div>
+        </nav>
         <main>
             <!-- section hebergement avec id hebergement -->
             <div id="hebergements" class="hebergements-and-populaires">
