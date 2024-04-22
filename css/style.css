@@ -204,6 +204,12 @@ justify-content: space-between;
 .hebergements {
     width: 65%;
 }
+/* Je modifie la taille de l'image dans les résultats de recherche */
+.hebergements img {
+    height: 100px;
+    width: 33%;
+    object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
+}
 
 /****** Populaires ***********/
 .populaires {
