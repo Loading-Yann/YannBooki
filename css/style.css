@@ -190,9 +190,16 @@ background-color: #0065FC;
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
 display: flex;
-justify-content: space-between;
-}
+justify-content: row;
 
+
+}
+.hebergements {
+    flex: 2;
+}
+.populaires {
+    flex:1;
+}
 .hebergements-and-populaires section {
     background-color: var(--main-bg-color);
     border-radius: 20px;
@@ -202,13 +209,34 @@ justify-content: space-between;
 
 /****** Hebergements ***********/
 .hebergements {
-    width: 65%;
+    width: 60%;
+    display: flex;
+    justify-content: row space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
+
 /* Je modifie la taille de l'image dans les résultats de recherche */
 .hebergements img {
-    height: 100px;
-    width: 33%;
+    height: 33%;
+    width: 225px;
     object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.hebergements .grille-carte {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.hebergements .card {
+    display: flex;
+flex-direction: column;
+/* flex en trois fois pour bien comprendre comment j'ai fait pour qu'ils se répartissent */
+flex-grow: 0; /* L'élément ne peut pas s'étendre */
+flex-shrink: 0; /* L'élément ne peut pas rétrécir */
+flex-basis: calc(30% - 20px); /* Définir la largeur de base de chaque carte */
 }
 
 /****** Populaires ***********/
@@ -255,9 +283,6 @@ justify-content: space-between;
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
-
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
