@@ -18,21 +18,23 @@
 
 <body>
     <div class="main-container">
-        <header>
+<header>
             <!--le logo en haut à gauche avec un lien vide
             J'ai laissé l'image en png, faut il la mettre en jpeg ? -->
-            <div class="booki-header">
-            <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="Logo Booki"></a>
+    <div class="booki-header">
+        <a href="#"><img id="logo" src="./images/logo/Booki.png" alt="Logo Booki"></a>
+        <nav>
             <!--Je fais une liste pour le menu en haut à droite, elle sera utilisable telle quel pour les mobiles-->
             <ul>
                 <li><a id="hebergements" href="#hebergements">Hébergements</a></li>
                 <li><a href="#activites">Activités</a></li>
             </ul>
-        </div>
-        </header>
-        <!-- je fais la partie formulaire -->
-        <nav>
-            <!-- la div pour le titre accrocheur -->
+        </nav>
+    </div>
+</header>
+<main>
+<!-- je fais la partie formulaire -->
+<!-- la div pour le titre accrocheur -->
 <div class="titreaccrocheur" >
     <h1 id="titreaccrocheur">Trouvez votre <strong>hébergements</strong> pour des <em>vacances</em> de rêve</h1>
     <p>En plein centre-ville ou en pleine nature</p>
@@ -48,15 +50,14 @@
     </form>
 </div>
 <div class="filtres">
-    <form method="post" action="">
         <ul>
         <li><button>Filtres</button></li>
-            <li><input class="checkboxfiltres" type="checkbox" name="Economique" id="Economique"> <label for="Economique"><i class="fa-solid fa-money-bill-1-wave" style="color: #0065fc;"></i>&#201;conomique</label></li>
-            <li><input class="checkboxfiltres" type="checkbox" name="Familial" id="Familial"> <label for="Familial"><i class="fa-solid fa-child" style="color: #0065fc;"></i>Familial</label></li>
-            <li><input class="checkboxfiltres" type="checkbox" name="Romantique" id="Romantique"> <label for="Romantique"><i class="fa-solid fa-heart" style="color: #0065fc;"></i>Romantique</label></li>
-            <li><input class="checkboxfiltres" type="checkbox" name="Nos pepites" id="Nos pepites"> <label for="Nos pepites"><i class="fa-solid fa-fire" style="color: #0065fc;"></i>Nos pépites</label></li>
+            <li>  <div class="filter-button"><i class="fa-solid fa-money-bill-1-wave" style="color: #0065fc;"></i><p>&#201;conomique</p></div></li>
+            <li>  <div class="filter-button">name="Familial" id="Familial"> <label for="Familial"><i class="fa-solid fa-child" style="color: #0065fc;"></i>Familial</label></div></li>
+            <li>  <div class="filter-button"> name="Romantique" id="Romantique"> <label for="Romantique"><i class="fa-solid fa-heart" style="color: #0065fc;"></i>Romantique</label></div></li>
+            <li>  <div class="filter-button">type="checkbox" name="Nos pepites" id="Nos pepites"> <label for="Nos pepites"><i class="fa-solid fa-fire" style="color: #0065fc;"></i>Nos pépites</label></div></li>
         </ul>
-    </form>
+    <!--  pas de checkbox juste div, règler le survol et  -->
 </div>
 <div>
     <p>
@@ -65,8 +66,7 @@
 </div>
 
 </div>
-    </nav>
-<main>
+
 <!-- section hebergement avec id hebergement -->
 <div id="hebergements" class="hebergements-and-populaires">
     <section class="hebergements">
@@ -308,7 +308,7 @@
     </a>
 </div>
 </section>
-</div><!-- fin de la div main contenair -->
+
 </main>
 <!-- Le pied de page. Je vais faire 3 listes avec des liens vides à chaque puce -->
 <footer>
@@ -337,6 +337,7 @@
     </div>
 </div>
 </footer>
+</div> <!-- fin de la div main contenair -->
 
 </body>
 
