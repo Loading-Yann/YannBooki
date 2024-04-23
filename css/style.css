@@ -295,6 +295,28 @@ height: 225px;
     margin-bottom: 5px;
 }
 
+/******* Activites ********/
+
+/*  la marge pour le titre */
+.activites-title {
+    margin-bottom: 20px;
+}
+/* la taille de la carte */
+.activites img {
+    width: 300px;
+    height: 400px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+}
+.activites .card-title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.activites {
+    display: flex;
+    flex-direction: row;
+}
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
