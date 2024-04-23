@@ -71,6 +71,7 @@ a {
 header ul {
     display: flex;
     justify-content: row;
+    padding-left: 0;
 }
 /* les points bien réparti */
 header li {
@@ -164,12 +165,13 @@ margin-right: 20px;
 .filtres ul  {
 display: flex;
 justify-content: row;
+padding-left: 0;
 }
 
 /* j'enlève les puces par défaut et je les réparti */
 .filtres li {
 list-style: none;
-margin-left : 20px ;
+margin-right : 5px ;
 border: 1px  solid black;
 border-radius: 10% 10% 10% 10% / 50% 50% 50% 50% ;
 padding: 4px;
@@ -352,6 +354,38 @@ height: 225px;
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
+}
+/******  le pied de page *******/
+/*  je mets le footer en bas */
+footer {
+    position: fixed; 
+    bottom: 0;
+    width: calc(100% - 40px);
+    background-color: #F2F2F2; 
+    padding: 20px; 
+    margin-left: 300px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+.colone-pied {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 30%;
+}
+footer h3 {
+    display: flex;
+    justify-content: left;
+}
+footer li {
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    margin-top: 10px;
+    padding-left: 0;
 }
 
 /* Small devices (phones, less than 768px) */
