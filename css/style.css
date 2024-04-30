@@ -116,30 +116,42 @@ nav i {
 
 /****** Formulaires recherches  ********/
 
+/*  la div complète du champ */
 .search-location {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-radius: 20px;
+  padding: 0px;
+  width: 100%;
+  max-width: 300px;
+  
 }
-
-
-
-/*  le logo localisation */
-.search-location label {
-  background-color: #f2f2f2;
+.search-location form {
+  display: flex;
+}
+/* Le logo localisation */
+.search-location .GPS {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: medium;
+  width: 30px;
+  height: 100%;
+  box-sizing: border-box;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+  background-color: #f2f2f2;
   padding: 5px;
 }
-
 /*  le champ de recherche */
 .search-location input {
   appearance: none;
   margin: 0px;
   border: transparent;
   padding: 0px;
-  width: 250px;
-  height: 35px;
+  width: 70%;
+  height: 100%;
   font-weight: bold;
   border-top: solid 0.5px #deebff;
   border-bottom: solid 0.5px #deebff;
@@ -147,23 +159,23 @@ nav i {
 }
 
 /* le bouton recherche */
-.search-location button {
+.search-location .button {
   background-color: #0065fc;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   font-size: medium;
-  margin-top: 2px;
-  margin-bottom: 2px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   margin-left: 0px;
 }
 
-.search-location button p {
+.search-location .button p {
   margin: 5px;
   color: white;
   font-weight: bold;
 }
 
-.search-location button i {
+.search-location .button i {
   display: none;
   margin: 5px;
 }
@@ -278,8 +290,9 @@ nav i {
 /* Je modifie la taille de l'image dans les résultats de recherche */
 .hebergements img {
   height: 50%;
-  width: 225px;
-  object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
+  width: 100%;
+  object-fit: cover;
+  /*Pour que l'image soit entièrement dans le conteneur*/
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -288,15 +301,21 @@ nav i {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   margin-right: 0;
-  gap: 15px;}
+}
+
+.hebergements .herbergement-card {
+  display: flex;
+  width: 30%;
+}
 
 .hebergements .card {
   display: flex;
   flex-direction: column;
   height: 225px;
+  width: 100%;
 }
 
 /****** Populaires ***********/
@@ -355,31 +374,41 @@ nav i {
 /*  div qui contient l'image en 20 %   à faire */
 .activites {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
 
 .activites .card {
-  width: 22%; /* Définir la largeur des cartes (25% de la largeur totale moins les marges) */
+  width: 22%;
+  /* Définir la largeur des cartes (25% de la largeur totale moins les marges) */
   min-width: 200px;
   margin: 5px;
   border-radius: 20px;
-  overflow: hidden; /* Assurer que les images ne débordent pas des cartes */
+  overflow: hidden;
+  /* Assurer que les images ne débordent pas des cartes */
 }
 
 .activites .img {
-  width: 100%; /* Définir la largeur de l'image à 100% du conteneur parent */
-  height: 400px; /* Définir la hauteur de l'image (ajustez selon vos besoins) */
-  overflow: hidden; /* Assurer que l'image reste à l'intérieur du conteneur */
+  width: 100%;
+  /* Définir la largeur de l'image à 100% du conteneur parent */
+  height: 400px;
+  /* Définir la hauteur de l'image (ajustez selon vos besoins) */
+  overflow: hidden;
+  /* Assurer que l'image reste à l'intérieur du conteneur */
 }
 
 .activites .img img {
-  width: 100%; /* Assurer que l'image s'adapte à la largeur du conteneur */
-  height: 100%; /* Assurer que l'image s'adapte à la hauteur du conteneur */
-  object-fit: cover; /* Ajuster l'image pour remplir le conteneur tout en conservant ses proportions */
-  border-top-left-radius: 20px; /* Ajouter les bordures arrondies */
-  border-top-right-radius: 20px; /* Ajouter les bordures arrondies */
+  width: 100%;
+  /* Assurer que l'image s'adapte à la largeur du conteneur */
+  height: 100%;
+  /* Assurer que l'image s'adapte à la hauteur du conteneur */
+  object-fit: cover;
+  /* Ajuster l'image pour remplir le conteneur tout en conservant ses proportions */
+  border-top-left-radius: 20px;
+  /* Ajouter les bordures arrondies */
+  border-top-right-radius: 20px;
+  /* Ajouter les bordures arrondies */
 }
 
 /* Styles supplémentaires pour le contenu de la carte (titre, etc.) */
@@ -465,6 +494,7 @@ footer li {
     order: -1;
     width: 100%;
   }
+
   .activites .img {
     height: 200px;
   }
@@ -475,52 +505,7 @@ footer li {
 @media (max-width: 767.98px) {
 
 
-  .populaires {
-    width: 100%;
-    order: -1;
-  }
-  
-  .populaires-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .populaires-cards .card {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 33px;
-  }
-  
-  .populaires-cards img {
-    width: 100%;
-    height: 136px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-  }
-  
-  .populaires-cards .card-content {
-    width: 100%;
-    padding-left: 15px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-  
-  .populaires-cards .card-title {
-    margin-top: 10px;
-    margin-bottom: 4px;
-  }
-  
-  .populaires-cards .card-subtitle {
-    margin: 0;
-  }
   /***** Header nav *****/
-
-
 
   /* on passe en menu vertical avec le logo et centré */
   .booki-header {
@@ -529,14 +514,18 @@ footer li {
     align-items: center;
   }
 
+  header li {
+    border-bottom: 2px solid rgba(192, 192, 192, 0.3);
+  }
+
   /* il n'y a pas de survol sur mobile apriori. mais quand même */
 
-/* survol des menus */
-header li:hover {
-  border-top: transparent;
-  border-bottom: 2px solid #0065fc;
-  color: #0065fc;
-}
+  /* survol des menus */
+  header li:hover {
+    border-top: transparent;
+    border-bottom: 2px solid #0065fc;
+    color: #0065fc;
+  }
 
   /* inversion de la marge pour garder le centre */
   header li {
@@ -549,12 +538,20 @@ header li:hover {
     margin-top: 10px;
   }
 
+  .filter-button {
+    width: 180px;
+  }
+
   /* Le média queries qui enlève rechercher et mettent la loupe */
-  .search-location button i {
+  .search-location {
+    width: 80%;
+    
+  }
+  .search-location .button i {
     display: flex;
   }
 
-  .search-location button p {
+  .search-location .button p {
     display: none;
   }
 
@@ -564,11 +561,77 @@ header li:hover {
     margin-right: 30px;
   }
 
+
+
+  /**** Populaires ****/
+
+
+  .populaires {
+    width: 100%;
+    order: -1;
+  }
+
+  .populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .populaires-cards {
+    flex-direction: column;
+  }
+
+  .populaires-cards .card {
+    width: 320%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 33px;
+  }
+
+  .populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+
+  .populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+
+  .populaires-cards .card-subtitle {
+    margin: 0;
+  }
+
   /**** hebergements  *****/
+
   .hebergements-and-populaires section {
     background-color: white;
   }
-  .hebergements-and-populaires .populaires { background-color: #f2f2f2;}
+
+  .hebergements-and-populaires .populaires {
+    background-color: #f2f2f2;
+  }
+
+  .hebergements-and-populaires .hebergements {
+    width: 100%;
+  }
+
+  .hebergements-and-populaires .hebergements .gird-card .card {
+    width: 100%;
+  }
 
   /******* activites *****/
   .activites {
@@ -577,16 +640,17 @@ header li:hover {
     align-items: flex-start;
     flex-wrap: wrap;
   }
-  
+
   /* Je modifie la taille de l'image dans les résultats de recherche */
   ..activites img {
     height: 50%;
-    width: 100%;
-    object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
+    width: 120%;
+    object-fit: cover;
+    /*Pour que l'image soit entièrement dans le conteneur*/
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
-  
+
   .activites .img {
     display: flex;
     flex-direction: row;
@@ -594,8 +658,9 @@ header li:hover {
     justify-content: center;
     width: 100%;
     margin-right: 0;
-    gap: 15px;}
-  
+    gap: 15px;
+  }
+
   .activites .card {
     display: flex;
     flex-direction: column;
@@ -603,10 +668,14 @@ header li:hover {
     height: 225px;
   }
 
-/**** pied de page *****/
+  /**** pied de page *****/
   .footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+  }
+
+  .footer li {
+    margin-top: 5px;
   }
 }
