@@ -100,13 +100,13 @@ header li:hover {
 
 /****** Titres d'accroches *********/
 
-..supertitle h1 {
+.supertitle h1 {
   flex-wrap: wrap;
   margin-bottom: 20px;
 
 }
 
-..supertitle p {
+.supertitle p {
   font-weight: thin;
 }
 
@@ -126,13 +126,12 @@ nav i {
 
 /*  le logo localisation */
 .search-location label {
-  font-size: medium;
   background-color: #f2f2f2;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
   padding: 5px;
-  height: 35px;
 }
+
 /*  le champ de recherche */
 .search-location input {
   appearance: none;
@@ -142,10 +141,11 @@ nav i {
   width: 250px;
   height: 35px;
   font-weight: bold;
-  border-top: solid  0.5px #deebff;
+  border-top: solid 0.5px #deebff;
   border-bottom: solid 0.5px #deebff;
   text-align: center;
 }
+
 /* le bouton recherche */
 .search-location button {
   background-color: #0065fc;
@@ -174,7 +174,7 @@ nav i {
 .filter {
   display: flex;
   justify-content: row;
- 
+  flex-wrap: wrap;
 }
 
 /* j'aligne aussi les puces de mes listes */
@@ -195,7 +195,7 @@ nav i {
   align-items: center;
   padding-right: 5px;
   padding-left: 10px;
-  margin: 0;
+  margin: 5px;
 }
 
 .filter-button:hover {
@@ -206,7 +206,6 @@ nav i {
 .filter-button p {
   margin: 5px 20px 5px 10px;
   padding: 5px;
-  gap: 2px;
 }
 
 .head-filter {
@@ -228,6 +227,7 @@ nav i {
 .result {
   display: flex;
   flex-direction: row;
+  margin-bottom: 20px;
 }
 
 .result p {
@@ -270,7 +270,7 @@ nav i {
 
 .hebergements {
   display: flex;
-  justify-content: row space-between;
+  justify-content: row;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -279,8 +279,7 @@ nav i {
 .hebergements img {
   height: 50%;
   width: 225px;
-  object-fit: cover;
-  /*Pour que l'image soit entièrement dans le conteneur*/
+  object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -289,8 +288,10 @@ nav i {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 15px;
-}
+  justify-content: center;
+  width: 100%;
+  margin-right: 0;
+  gap: 15px;}
 
 .hebergements .card {
   display: flex;
@@ -354,28 +355,40 @@ nav i {
 /*  div qui contient l'image en 20 %   à faire */
 .activites {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap; 
+  justify-content: space-between;
   width: 100%;
 }
 
 .activites .card {
-  width: 20%;
-  height: 400px;
-  padding: 2px;
+  width: 22%; /* Définir la largeur des cartes (25% de la largeur totale moins les marges) */
+  min-width: 200px;
+  margin: 5px;
   border-radius: 20px;
+  overflow: hidden; /* Assurer que les images ne débordent pas des cartes */
 }
 
-.activites img {
-  width: 20%;
-  height: 400px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+.activites .img {
+  width: 100%; /* Définir la largeur de l'image à 100% du conteneur parent */
+  height: 400px; /* Définir la hauteur de l'image (ajustez selon vos besoins) */
+  overflow: hidden; /* Assurer que l'image reste à l'intérieur du conteneur */
+}
+
+.activites .img img {
+  width: 100%; /* Assurer que l'image s'adapte à la largeur du conteneur */
+  height: 100%; /* Assurer que l'image s'adapte à la hauteur du conteneur */
+  object-fit: cover; /* Ajuster l'image pour remplir le conteneur tout en conservant ses proportions */
+  border-top-left-radius: 20px; /* Ajouter les bordures arrondies */
+  border-top-right-radius: 20px; /* Ajouter les bordures arrondies */
+}
+
+/* Styles supplémentaires pour le contenu de la carte (titre, etc.) */
+.activites .card-content {
+  padding: 20px;
 }
 
 .activites .card-title {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
 }
 
 
@@ -383,19 +396,19 @@ nav i {
 /*  je mets le footer en bas */
 footer {
   max-width: 1440px;
-  width: 80%;
+  width: 100%;
   background-color: #f2f2f2;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .footer-column {
@@ -406,7 +419,7 @@ footer {
 
 footer li {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   text-decoration: none;
   margin-top: 10px;
   padding-left: 0;
@@ -447,20 +460,67 @@ footer li {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+
+  .head-filter {
+    order: -1;
+    width: 100%;
+  }
+  .activites .img {
+    height: 200px;
+  }
 }
 
-/* Small devices (phones, less than 768px) */
+/**** Small devices (phones, less than 768px) *****/
+
 @media (max-width: 767.98px) {
 
-  header #hebergements {
-    border-bottom: 1px solid #0065fc;
-    /* Crée un trait de soulignement */
-    line-height: 0.5;
-    /* Ajuste l'espacement entre les lignes de texte */
-    padding-bottom: 4px;
-    border-top: none;
-    color: #0065fc;
+
+  .populaires {
+    width: 100%;
+    order: -1;
   }
+  
+  .populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .populaires-cards .card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 33px;
+  }
+  
+  .populaires-cards img {
+    width: 100%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .populaires-cards .card-content {
+    width: 100%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  
+  .populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+  }
+  
+  .populaires-cards .card-subtitle {
+    margin: 0;
+  }
+  /***** Header nav *****/
+
+
 
   /* on passe en menu vertical avec le logo et centré */
   .booki-header {
@@ -469,21 +529,24 @@ footer li {
     align-items: center;
   }
 
-  /* il n'y a pas de survol sur mobile apriori. La propriété plus haut devrait suffir à un rendu stable */
-  header li:hover {
-    border-top: none;
-    /* annule le trait de soulignement */
-    border-bottom: 1px solid #0065fc;
-    /* Crée un trait de soulignement */
-    line-height: 0.5;
-    /* Ajuste l'espacement entre les lignes de texte */
-    color: #0065fc;
-  }
+  /* il n'y a pas de survol sur mobile apriori. mais quand même */
+
+/* survol des menus */
+header li:hover {
+  border-top: transparent;
+  border-bottom: 2px solid #0065fc;
+  color: #0065fc;
+}
 
   /* inversion de la marge pour garder le centre */
   header li {
     margin-left: 0px;
     padding: 20px;
+  }
+
+  .filter {
+    flex-direction: column;
+    margin-top: 10px;
   }
 
   /* Le média queries qui enlève rechercher et mettent la loupe */
@@ -501,4 +564,49 @@ footer li {
     margin-right: 30px;
   }
 
+  /**** hebergements  *****/
+  .hebergements-and-populaires section {
+    background-color: white;
+  }
+  .hebergements-and-populaires .populaires { background-color: #f2f2f2;}
+
+  /******* activites *****/
+  .activites {
+    display: flex;
+    justify-content: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  /* Je modifie la taille de l'image dans les résultats de recherche */
+  ..activites img {
+    height: 50%;
+    width: 100%;
+    object-fit: cover; /*Pour que l'image soit entièrement dans le conteneur*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .activites .img {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-right: 0;
+    gap: 15px;}
+  
+  .activites .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 225px;
+  }
+
+/**** pied de page *****/
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
