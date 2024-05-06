@@ -125,11 +125,13 @@ nav i {
   padding: 0px;
   width: 100%;
   max-width: 300px;
-  
+
 }
+
 .search-location form {
   display: flex;
 }
+
 /* Le logo localisation */
 .search-location .GPS {
   display: flex;
@@ -144,6 +146,7 @@ nav i {
   background-color: #f2f2f2;
   padding: 5px;
 }
+
 /*  le champ de recherche */
 .search-location input {
   appearance: none;
@@ -424,6 +427,7 @@ nav i {
 /******  le pied de page *******/
 /*  je mets le footer en bas */
 footer {
+
   max-width: 1440px;
   width: 100%;
   background-color: #f2f2f2;
@@ -437,13 +441,29 @@ footer {
 .footer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-right: 20%;
+  padding-left: 10px;
 }
 
 .footer-column {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-left: 0;
+}
+
+footer h3 {
+  margin: 0;
+  padding: 0;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  margin-left: 0;
 }
 
 footer li {
@@ -452,6 +472,7 @@ footer li {
   text-decoration: none;
   margin-top: 10px;
   padding-left: 0;
+  margin-left: 0;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -506,7 +527,9 @@ footer li {
 
 
   /***** Header nav *****/
-
+.supertitle h1 {
+  font-size: 24px;
+}
   /* on passe en menu vertical avec le logo et centré */
   .booki-header {
     display: flex;
@@ -545,8 +568,9 @@ footer li {
   /* Le média queries qui enlève rechercher et mettent la loupe */
   .search-location {
     width: 80%;
-    
+
   }
+
   .search-location .button i {
     display: flex;
   }
@@ -634,6 +658,8 @@ footer li {
   }
 
   /******* activites *****/
+
+
   .activites {
     display: flex;
     justify-content: row;
@@ -676,6 +702,10 @@ footer li {
   }
 
   .footer li {
-    margin-top: 5px;
+    margin-top: 10px;
+  }
+
+  .footer ul {
+    margin-bottom: 20px;
   }
 }
