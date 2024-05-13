@@ -2,6 +2,9 @@
 * {
   font-family: "Raleway", sans-serif;
 }
+body {
+  margin: 0px;
+}
 
 :root {
   --main-color: #0065fc;
@@ -18,13 +21,6 @@ body {
   justify-content: center;
 }
 
-strong {
-  font-weight: normal;
-}
-
-em {
-  font-style: normal;
-}
 
 .main-container {
   width: 100%;
@@ -76,10 +72,17 @@ a {
   justify-content: space-between;
 }
 
+.booki-header a img {
+
+  height: 20px;
+  padding-top: 30px;
+}
+
 /* le logo en rangé */
 header ul {
   display: flex;
   padding-left: 0;
+  margin-top: 0;
 }
 
 /* les points bien réparti */
@@ -87,7 +90,7 @@ header li {
   list-style: none;
   margin-left: 50px;
   border-top: 1px solid transparent;
-  padding-top: 4px;
+  padding-top: 15px;
 }
 
 /* survol des menus */
@@ -195,7 +198,6 @@ nav i {
   display: flex;
   padding-left: 0;
   flex-wrap: wrap;
-  background-color: green;
 }
 
 .filter-button {
@@ -209,7 +211,6 @@ nav i {
   padding-right: 5px;
   padding-left: 10px;
   margin: 5px;
-  background-color: red;
 }
 
 .filter-button:hover {
@@ -222,11 +223,10 @@ nav i {
   justify-content: center;
   margin: 5px;
   padding: 5px;
-  background-color: blue;
 
 }
 
-.head-filter {
+.head-filter p {
   margin-right: 20px;
 }
 
@@ -261,7 +261,6 @@ nav i {
 
 .hebergements-and-populaires {
   display: flex;
-  justify-content: row;
   gap: 20px;
 }
 
@@ -288,7 +287,6 @@ nav i {
 
 .hebergements {
   display: flex;
-  justify-content: row;
   align-items: flex-start;
   flex-wrap: wrap;
 }
@@ -323,6 +321,7 @@ nav i {
   flex-direction: column;
   height: 225px;
   width: 100%;
+  margin-top: 20px;
 }
 
 /****** Populaires ***********/
@@ -378,47 +377,34 @@ nav i {
 }
 
 /* la taille de la carte */
-/*  div qui contient l'image en 20 %   à faire */
 .activites {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
 }
 
 .activites .card {
   width: 22%;
-  /* Définir la largeur des cartes (25% de la largeur totale moins les marges) */
-  min-width: 200px;
   margin: 5px;
   border-radius: 20px;
   overflow: hidden;
-  /* Assurer que les images ne débordent pas des cartes */
 }
 
 .activites .img {
   width: 100%;
-  /* Définir la largeur de l'image à 100% du conteneur parent */
   height: 400px;
-  /* Définir la hauteur de l'image (ajustez selon vos besoins) */
   overflow: hidden;
-  /* Assurer que l'image reste à l'intérieur du conteneur */
 }
 
 .activites .img img {
   width: 100%;
-  /* Assurer que l'image s'adapte à la largeur du conteneur */
   height: 100%;
-  /* Assurer que l'image s'adapte à la hauteur du conteneur */
   object-fit: cover;
-  /* Ajuster l'image pour remplir le conteneur tout en conservant ses proportions */
   border-top-left-radius: 20px;
-  /* Ajouter les bordures arrondies */
   border-top-right-radius: 20px;
-  /* Ajouter les bordures arrondies */
 }
 
-/* Styles supplémentaires pour le contenu de la carte (titre, etc.) */
 .activites .card-content {
   padding: 20px;
 }
@@ -539,8 +525,12 @@ footer li {
 
   /***** Header nav *****/
   .supertitle h1 {
-    font-size: 20px;
+    font-size: x-large;
+    margin-bottom: 0px;
   }
+  .supertitle p 
+  { margin-top: 3px;
+  font-size: large;}
 
   nav {
     width: 100%;
@@ -562,12 +552,19 @@ footer li {
 
   header li {
     border-bottom: 2px solid rgba(192, 192, 192, 0.3);
+    padding-bottom: 15px;
     width: 50%;
     margin: 0;
     text-align: center;
   }
 
-  /* il n'y a pas de survol sur mobile apriori. mais quand même */
+  .booki-header ul {
+    margin-top: 50px;
+  }
+  .booki-header li {
+    padding-bottom: 15px;
+    font-size: large;
+  }
 
   /* survol des menus */
   header li:hover {
@@ -576,7 +573,6 @@ footer li {
     color: #0065fc;
   }
 
-  /* inversion de la marge pour garder le centre */
   header li {
     margin-left: 0px;
     padding: 0px;
@@ -586,6 +582,7 @@ footer li {
   /* Le média queries qui enlève rechercher et mettent la loupe */
   .search-location {
     width: 80%;
+    margin-top: 30px;
   }
 
   /* avec l'ombre de la loupe */
@@ -598,6 +595,7 @@ footer li {
 
   .search-location .GPS i {
     padding: 8px;
+    margin-left: 20px;
   }
 
   .search-location .button i {
@@ -611,30 +609,34 @@ footer li {
 
   .form-location ul {
     display: flex;
-    justify-content: row;
     margin-right: 30px;
   }
 
-  /* j'ai mis une marge négative pour que la bordure aille jusqu'au bouton avec les bordures */
+  /* la marge négative permet aux bordures d'aller jusqu'à la loupe malgré l'ajout de l'arrondi */
   .search-location input {
-    font-size: small;
+    font-size: medium;
     margin-right: -8px;
     padding: 8px;
   }
 
+  /***** filtres  *****/
+
+  .head-filter p {
+    margin-left: 10px;
+  }
   .filter {
     flex-direction: column;
     margin-top: 10px;
   }
 
   .filter-button {
-    width: 180px;
+    justify-content: center;
+    gap: 10px;
   }
 
   .filter-button p {
     margin-left: 0px;
     padding-left: 0px;
-
   }
 
   .result {
@@ -718,7 +720,7 @@ footer li {
   .hebergements .herbergement-card {
     display: flex;
     width: 100%;
-    margin-top: 5px;
+  
   }
 
   /******* activites *****/
@@ -726,7 +728,6 @@ footer li {
 
   .activites {
     display: flex;
-    justify-content: row;
     align-items: flex-start;
     flex-wrap: wrap;
   }
@@ -759,6 +760,7 @@ footer li {
   }
 
   /**** pied de page *****/
+
   .footer {
     display: flex;
     flex-direction: column;
