@@ -68,14 +68,13 @@ a {
 }
 
 /****** Header *****/
-/* space du logo et du menu */
+/* espace du logo et du menu */
 .booki-header {
   display: flex;
   justify-content: space-between;
 }
 
 .booki-header a img {
-
   height: 20px;
   padding-top: 30px;
 }
@@ -87,7 +86,7 @@ header ul {
   margin-top: 0;
 }
 
-/* les points bien réparti */
+/* les points bien répartis */
 header li {
   list-style: none;
   margin-left: 50px;
@@ -107,7 +106,6 @@ header li:hover {
 .supertitle h1 {
   flex-wrap: wrap;
   margin-bottom: 20px;
-
 }
 
 .supertitle p {
@@ -120,7 +118,7 @@ nav i {
 
 /****** Formulaires recherches  ********/
 
-/*  la div complète du champ */
+/*  la div complète du champ de localisation */
 .search-location {
   display: flex;
   flex-direction: row;
@@ -129,7 +127,6 @@ nav i {
   padding: 0px;
   width: 100%;
   max-width: 300px;
-
 }
 
 .search-location form {
@@ -186,6 +183,7 @@ nav i {
   font-weight: bold;
 }
 
+/*  le bouton en icone n'apparaît pas ici, il sera utilisé en version mobile */
 .search-location .button i {
   display: none;
   margin: 5px;
@@ -219,6 +217,7 @@ nav i {
   margin: 5px;
 }
 
+/*  survol des filtres */
 .filter-button:hover {
   cursor: pointer;
   background-color: #deebff;
@@ -236,7 +235,7 @@ nav i {
   margin-right: 20px;
 }
 
-/* j'enlève les puces par défaut et je les réparti */
+/* j'enlève les puces par défaut et je les répartis */
 .filter li {
   display: flex;
   justify-content: flex-start;
@@ -247,7 +246,7 @@ nav i {
   font-weight: bold;
 }
 
-/*  les résultats  */
+/*  le nombre de résultats  */
 .result {
   display: flex;
   flex-direction: row;
@@ -302,11 +301,10 @@ nav i {
 .hebergements img {
   height: 50%;
   width: 100%;
-  object-fit: cover;
   /*Pour que l'image soit entièrement dans le conteneur*/
+  object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
 }
 
 .hebergements .gird-card {
@@ -426,9 +424,8 @@ nav i {
 
 
 /******  le pied de page *******/
-/*  je mets le footer en bas */
-footer {
 
+footer {
   max-width: 1440px;
   width: 100%;
   background-color: #f2f2f2;
@@ -489,7 +486,7 @@ footer li {
 
   .populaires {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 5px;
   }
 
   .populaires-cards {
@@ -534,6 +531,7 @@ footer li {
 
 
   /***** Header nav *****/
+
   .supertitle h1 {
     font-size: x-large;
     margin-bottom: 0px;
@@ -543,6 +541,8 @@ footer li {
     margin-top: 3px;
     font-size: large;
   }
+
+  /* on passe en menu vertical avec le logo et centré */
 
   nav {
     width: 100%;
@@ -555,7 +555,7 @@ footer li {
     margin-right: -8px;
   }
 
-  /* on passe en menu vertical avec le logo et centré */
+
   .booki-header {
     display: flex;
     flex-direction: column;
@@ -609,6 +609,7 @@ footer li {
   .search-location .GPS i {
     padding: 8px;
     margin-left: 20px;
+    margin-right: 15px;
   }
 
   .search-location .button i {
@@ -659,7 +660,7 @@ footer li {
 
   /**** Populaires ****/
 
-
+  /*  J'ai utilisé order pour mettre populaire à la bonne place */
   .populaires {
     width: 100%;
     order: -1;
@@ -718,6 +719,8 @@ footer li {
     border-radius: 0px;
   }
 
+  /*  Les couleurs de fonds s'inversent */
+
   .hebergements-and-populaires .populaires {
     background-color: #f2f2f2;
   }
@@ -744,14 +747,17 @@ footer li {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    gap : 15px;
   }
-
+.activites .card-content card-txt {
+  margin-bottom: 15px;
+}
   /* Je modifie la taille de l'image dans les résultats de recherche */
+
   ..activites img {
     height: 50%;
     width: 120%;
     object-fit: cover;
-    /*Pour que l'image soit entièrement dans le conteneur*/
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -770,7 +776,7 @@ footer li {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 250px;
+    height: 260px;
   }
 
   /**** pied de page *****/
