@@ -140,17 +140,16 @@ nav i {
   justify-content: center;
   align-content: center;
   font-size: medium;
-  width: 30px;
   height: 100%;
   box-sizing: border-box;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
   background-color: var(--main-bg-color);
-  padding: 5px;
 }
 
 .search-location .GPS i {
   color: black;
+  margin: 15px;
 }
 
 /*  le champ de recherche */
@@ -159,7 +158,7 @@ nav i {
   margin: 0px;
   border: transparent;
   padding: 0px;
-  width: 70%;
+  width: 80%;
   height: 100%;
   font-weight: bold;
   border-top: solid 0.5px var(--filter-bg-color);
@@ -174,16 +173,13 @@ nav i {
 /* le bouton recherche */
 .search-location .button {
   background-color: var(--main-color);
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   font-size: medium;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
 }
 
 .search-location .button p {
-  margin: 5px;
+  margin: 15px;
   color: white;
   font-weight: bold;
 }
@@ -602,8 +598,13 @@ footer li {
 
   /* Le média queries qui enlève rechercher et mettent la loupe */
   .search-location {
-    width: 80%;
+    width: 100%;
     margin-top: 30px;
+    max-width: none;
+  }
+
+  .search-location form {
+    width: 100%;
   }
 
   /* avec l'ombre de la loupe */
@@ -614,11 +615,6 @@ footer li {
     padding: 8px;
   }
 
-  .search-location .GPS i {
-    padding: 8px;
-    margin-left: 20px;
-    margin-right: 15px;
-  }
 
   .search-location .button i {
 
@@ -627,6 +623,10 @@ footer li {
 
   .search-location .button p {
     display: none;
+  }
+
+  .search-location .button {
+    margin-right: 15px;
   }
 
   .form-location ul {
