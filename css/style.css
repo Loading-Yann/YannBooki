@@ -1,6 +1,6 @@
 /****** Général ******/
 
- * {
+* {
   font-family: "Raleway", sans-serif;
 }
 
@@ -142,6 +142,7 @@ nav i {
   font-size: medium;
   height: 100%;
   box-sizing: border-box;
+  border: solid 0.5px var(--filter-bg-color);
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   background-color: var(--main-bg-color);
@@ -197,6 +198,8 @@ nav i {
 .filter {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  font-size: 17px;
 }
 
 /* j'aligne aussi les puces de mes listes */
@@ -208,15 +211,15 @@ nav i {
 
 .filter-button {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   border: solid 2px var(--main-bg-color);
   border-radius: 30px;
-  align-items: center;
   padding-right: 5px;
   padding-left: 10px;
-  margin: 5px;
+  margin: 2px;
+  text-align: center
 }
 
 /*  survol des filtres */
@@ -227,10 +230,16 @@ nav i {
 
 .filter-button p {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  white-space: nowrap; /* Prevent text from wrapping */
   margin: 5px;
   padding: 5px;
+}
 
+.filter-button i {
+  margin-right: 15px;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .head-filter p {
@@ -239,10 +248,6 @@ nav i {
 
 /* j'enlève les puces par défaut et je les répartis */
 .filter li {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
   list-style: none;
   margin: 0 5px 0 0;
   font-weight: bold;
@@ -510,11 +515,20 @@ footer li {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
-
+.filter {
+  font-size: 16px;
+}
   .head-filter {
     order: -1;
     width: 100%;
   }
+.filter ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.filter ul li.head-filter {
+  grid-column: 1 / -1; /* Toujours occupe toute la largeur */
+}
 
   .activites .img {
     height: 200px;
@@ -648,20 +662,24 @@ footer li {
   }
 
   .filter {
-    flex-direction: column;
     margin-top: 10px;
+flex-direction: column;
+align-items: center;
+
   }
 
-  .filter-button {
-    justify-content: center;
-    gap: 10px;
+  .filter ul {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    width: 100%;
   }
 
-  .filter-button p {
-    margin-left: 0px;
-    padding-left: 0px;
+  .filter-button { 
+    min-width: 120px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    width: auto;
   }
-
   .result {
     margin-left: 30px;
   }
